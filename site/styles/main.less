@@ -1,0 +1,42 @@
+/**
+ * Main Style Sheet
+ * Ono academic college
+ *
+ * Copyright (c) 2016. by Way2CU, http://way2cu.com
+ * Authors: Tal Reznic
+ */
+
+@import "common.less";
+@import "header.less";
+
+@import (css) "stock/header.css";
+@import (css) "stock/copyright.css";
+
+body {
+  background-color: white;
+  color: @color_grey;
+  font-family: 'FoodiFOT Regular Regular', Arial;
+}
+
+input,
+select,
+textarea,
+button {
+  font-weight: 400;
+  font-family: 'FoodiFOT Regular Regular', Arial;
+}
+
+body.rtl,
+body.rtl input,
+body.rtl select,
+body.rtl textarea,
+body.rtl button {
+  font-family: 'FoodiFOT Regular Regular', sans-serif;
+}
+
+h1,
+h3,
+h4,
+h5 {
+  font-weight: 700;
+}
