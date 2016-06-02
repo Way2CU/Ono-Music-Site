@@ -25,6 +25,18 @@
 				</a>
 			</header>
 
+			<section class="intro">
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="header_intro"
+					template="parts/header_article.xml"
+					/>
+					<span>
+						<cms:svg file="site-sprite.svg" symbol="arrow"/>
+					</span>
+			</section>
+
 		</body>
 	</html>
 </document>

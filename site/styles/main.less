@@ -8,11 +8,13 @@
 
 @import "common.less";
 @import "header.less";
+@import "content.less";
 
 @import (css) "stock/copyright.css";
 
 body {
-  background-color: white;
+  padding-top: 95px;
+  background-color: @color_white;
   color: @color_grey;
   font-family: Arial;
 }
@@ -21,14 +23,6 @@ input,
 select,
 textarea,
 button {
-  font-family: Arial;
-}
-
-body.rtl,
-body.rtl input,
-body.rtl select,
-body.rtl textarea,
-body.rtl button {
   font-family: Foodi, Arial, sans-serif;
 }
 
