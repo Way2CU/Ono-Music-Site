@@ -9,7 +9,22 @@
 		</head>
 
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
-			<h1>It works!</h1>
+			<cms:svg file="site-sprite.svg"/>
+			<!-- Top section of the site -->
+			<header>
+				<a  class="logo" href="url_Make('','home')" cms:eval="href">
+					<img src="_BASEURL.'/site/images/logo.svg'" alt="logo" cms:eval="src"/>
+				</a>
+				<a
+					href="'tel:'.urlencode(Language::getText('phone'))"
+					cms:eval="href"
+					class="phone"
+					>
+					<cms:text constant="phone"/>
+					<cms:svg file="site-sprite.svg" symbol="phone"/>
+				</a>
+			</header>
+
 		</body>
 	</html>
 </document>

@@ -5,3 +5,58 @@
  * Copyright (c) 2016. by Way2CU, http://way2cu.com
  * Authors:Tal Reznic
  */
+
+header {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  position: relative;
+  padding: 0.7em calc(~'(100vw - 1200px)' / 2);
+  box-shadow: 0px 0px 3px fade(@color_grey, 60%);
+  border-bottom: 1px solid fade(@color_grey, 35%);
+}
+
+header a.logo {
+  display: inline-block;
+  width: 150px;
+}
+
+header a.logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+header a.phone {
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  margin-top: -0.75em;
+  left: calc(~'(50% - 600px)');
+  color: @color_green;
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+header a.phone:hover {
+  color: lighten(@color_green, 5%);
+}
+
+header a.phone:hover svg {
+  fill: lighten(@color_green, 5%);
+}
+
+header a.phone svg {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1.5em;
+  height: 1.5em;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+  fill: @color_green;
+  transition: all 0.3s;
+}
