@@ -1,0 +1,15 @@
+<document>
+  <li>
+    <img src="$params['images']" alt="$params['title']['$language']" cms:eval="src,alt"/>
+
+    <!-- show title if needed -->
+    <cms:if condition="isset($template['title'])">
+      <p><cms:var param="name" multilanguage="yes"/></p>
+    </cms:if>
+    
+    <!-- show description of image if needed -->
+    <cms:if condition="isset($template['description'])">
+      <p><cms:var param="description" multilanguage="yes"/></p>
+    </cms:if>
+  </li>
+</document>

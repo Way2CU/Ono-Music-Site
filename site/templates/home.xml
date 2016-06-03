@@ -37,6 +37,99 @@
 					</span>
 			</section>
 
+			<section>
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="discount"
+					template="parts/discount.xml"
+					/>
+				<div class="form_wrap">
+					<cms:module
+						name="contact_form"
+						action="show"
+						text_id="contact"
+						/>
+				</div>
+			</section>
+
+			<section class="pattern">
+				<cms:module
+					name="articles"
+					action="show_group"
+					text_id="features"
+					template="parts/features.xml"
+				/>
+			</section>
+
+			<section>
+				<cms:module
+					name="articles"
+					action="show_list"
+					group="information"
+					template="parts/details.xml"
+					/>
+				<h3><cms:text constant="title_sponsers"/></h3>
+				<ul>
+					<cms:module
+						name="gallery"
+						action="show_image_list"
+						text_id="sponsers"
+						template="parts/gallery_images.xml"
+						/>
+				</ul>
+			</section>
+
+			<section>
+				<h2><cms:text constant="title_graduates"/></h2>
+				<cms:module
+					name="gallery"
+					action="show_image_list"
+					group="graduates"
+					template="parts/gallery_images.xml"
+					>
+					<param name="title" value=""/>
+					<param name="description" value=""/>
+				</cms:module>
+
+				<h2><cms:text constant="title_lecturers"/></h2>
+				<cms:module
+					name="gallery"
+					action="show_image_list"
+					group="lecturers"
+					template="parts/gallery_images.xml"
+					>
+					<param name="title" value=""/>
+				</cms:module>
+			</section>
+
+			<footer>
+				<div class="half">
+					<img src="_BASEURL.'/site/images/logo.svg'" alt="logo" cms:eval="src"/>
+					<p><cms:text constant="slogan"/></p>
+					<a
+						href="'tel:'.urlencode(Language::getText('phone'))"
+						cms:eval="href"
+						class="phone"
+						>
+						<cms:text constant="phone"/>
+						<cms:svg file="site-sprite.svg" symbol="phone"/>
+					</a>
+				</div>
+				<div class="form_wrap">
+					<cms:module
+						name="contact_form"
+						action="show"
+						text_id="contact"
+						/>
+				</div>
+				<cms:template file="stock/copyright.xml">
+					<param name="holder" value="copyright_holder"/>
+					<param name="text" value="copyright_text"/>
+					<param name="light" value="1"/>
+				</cms:template>
+			</footer>
+			
 		</body>
 	</html>
 </document>

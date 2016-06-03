@@ -1,0 +1,8 @@
+<document>
+  <div class="half">
+    <h2><cms:var param="title" multilanguage="yes"/></h2>
+    <div class="discount">
+      <cms:markdown param="content" multilanguage="yes"/>
+    </div>
+  </div>
+</document>
