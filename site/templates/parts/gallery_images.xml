@@ -1,18 +1,39 @@
 <document>
-  <li>
-    <img 
-      src="gallery::getThumbnailById($params['id'], null, 250,Thumbnail::CONSTRAIN_BOTH)"
-      alt="$params['title'][$language]" 
-      cms:eval="src,alt"
-      />
-    <!-- show title if needed -->
-    <cms:if condition="isset($template['title'])">
-      <h4><cms:var param="title" multilanguage="yes"/></h4>
-    </cms:if>
-    
-    <!-- show description of image if needed -->
-    <cms:if condition="isset($template['description'])">
-      <p><cms:var param="description" multilanguage="yes"/></p>
-    </cms:if>
-  </li>
+  <cms:desktop>
+    <li>
+      <img 
+        src="gallery::getThumbnailById($params['id'], null, 250,Thumbnail::CONSTRAIN_BOTH)"
+        alt="$params['title'][$language]" 
+        cms:eval="src,alt"
+        />
+      <!-- show title if needed -->
+      <cms:if condition="isset($template['title'])">
+        <h4><cms:var param="title" multilanguage="yes"/></h4>
+      </cms:if>
+      
+      <!-- show description of image if needed -->
+      <cms:if condition="isset($template['description'])">
+        <p><cms:var param="description" multilanguage="yes"/></p>
+      </cms:if>
+    </li>
+  </cms:desktop>
+
+  <cms:mobile>
+    <li>
+      <img 
+        src="gallery::getThumbnailById($params['id'], null, 150,Thumbnail::CONSTRAIN_BOTH)"
+        alt="$params['title'][$language]" 
+        cms:eval="src,alt"
+        />
+      <!-- show title if needed -->
+      <cms:if condition="isset($template['title'])">
+        <h4><cms:var param="title" multilanguage="yes"/></h4>
+      </cms:if>
+      
+      <!-- show description of image if needed -->
+      <cms:if condition="isset($template['description'])">
+        <p><cms:var param="description" multilanguage="yes"/></p>
+      </cms:if>
+    </li>
+  </cms:mobile>
 </document>

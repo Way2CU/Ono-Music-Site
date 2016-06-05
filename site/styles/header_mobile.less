@@ -1,0 +1,65 @@
+/**
+ * Header mobile Style Sheet
+ * Ono academic college
+ *
+ * Copyright (c) 2016. by Way2CU, http://way2cu.com
+ * Authors:Tal Reznic
+ */
+
+header {
+  position: fixed;
+  padding: 0.5em;
+  top: 0px;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 0px 3px fade(@color_grey, 60%);
+  border-bottom: 1px solid fade(@color_grey, 35%);
+  background-color: @color_white;
+  z-index: 100000;
+  }
+
+header a.logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100px;
+}
+
+header a.logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+header a.sign,
+header a.phone {
+  position: absolute;
+  top: 50%;
+  margin-top: -1.25em;
+  left: 0;
+}
+
+header a.sign {
+  left: 3em;
+}
+
+header a.sign,
+header a.phone {
+  display: inline-block;
+  vertical-align: middle;
+  color: @color_grey;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+header a.sign svg,
+header a.phone svg {
+  display: inline-block;
+  vertical-align: middle;
+  width: 2.5em;
+  height: 2.5em;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  fill: @color_green;
+  transition: all 0.3s;
+}

@@ -12,17 +12,33 @@
 			<cms:svg file="site-sprite.svg"/>
 			<!-- Top section of the site -->
 			<header>
-				<a  class="logo" href="url_Make('','home')" cms:eval="href">
+				<a  class="logo" href="url_Make()" cms:eval="href">
 					<img src="_BASEURL.'/site/images/logo.svg'" alt="logo" cms:eval="src"/>
 				</a>
-				<a
-					href="'tel:'.urlencode(Language::getText('phone'))"
-					cms:eval="href"
-					class="phone"
-					>
-					<cms:text constant="phone"/>
-					<cms:svg file="site-sprite.svg" symbol="phone"/>
-				</a>
+				<cms:mobile>
+					<a href="url_Make().'#form_direct'" cms:eval="href" class="sign">
+						<cms:text constant="sign"/>
+						<cms:svg file="site-sprite.svg" symbol="form"/>
+					</a>
+					<a
+						href="'tel:'.urlencode(Language::getText('phone'))"
+						cms:eval="href"
+						class="phone"
+						>
+						<cms:svg file="site-sprite.svg" symbol="phone"/>
+					</a>
+				</cms:mobile>
+				
+				<cms:desktop>
+					<a
+						href="'tel:'.urlencode(Language::getText('phone'))"
+						cms:eval="href"
+						class="phone"
+						>
+						<cms:text constant="phone"/>
+						<cms:svg file="site-sprite.svg" symbol="phone"/>
+					</a>
+				</cms:desktop>
 			</header>
 
 			<section class="intro">
@@ -37,14 +53,14 @@
 					</span>
 			</section>
 
-			<section>
+			<section class="discount">
 				<cms:module
 					name="articles"
 					action="show"
 					text_id="discount"
 					template="parts/discount.xml"
 					/>
-				<div class="form_wrap">
+				<div class="form_wrap" id="form_direct">
 					<p><cms:text constant="title_form"/></p>
 					<cms:module
 						name="contact_form"
@@ -55,6 +71,7 @@
 			</section>
 
 			<section class="pattern">
+				
 				<cms:module
 					name="articles"
 					action="show_group"
@@ -109,28 +126,52 @@
 					</cms:module>
 				</ul>
 			</section>
-
 			<footer>
-				<div class="half">
-					<img src="_BASEURL.'/site/images/logo.svg'" alt="logo" cms:eval="src"/>
-					<p><cms:text constant="slogan"/></p>
-					<a
-						href="'tel:'.urlencode(Language::getText('phone'))"
-						cms:eval="href"
-						class="phone"
-						>
-						<cms:text constant="phone"/>
-						<cms:svg file="site-sprite.svg" symbol="phone"/>
-					</a>
-				</div>
-				<div class="form_wrap">
-					<p><cms:text constant="title_form"/></p>
-					<cms:module
-						name="contact_form"
-						action="show"
-						text_id="contact"
-						/>
-				</div>
+			<cms:desktop>
+					<div class="half">
+						<img src="_BASEURL.'/site/images/logo.svg'" alt="logo" cms:eval="src"/>
+						<p><cms:text constant="slogan"/></p>
+						<a
+							href="'tel:'.urlencode(Language::getText('phone'))"
+							cms:eval="href"
+							class="phone"
+							>
+							<cms:text constant="phone"/>
+							<cms:svg file="site-sprite.svg" symbol="phone"/>
+						</a>
+					</div>
+					<div class="form_wrap">
+						<p><cms:text constant="title_form"/></p>
+						<cms:module
+							name="contact_form"
+							action="show"
+							text_id="contact"
+							/>
+					</div>
+				</cms:desktop>
+
+				<cms:mobile>
+						<div class="form_wrap">
+							<p><cms:text constant="title_form"/></p>
+							<cms:module
+								name="contact_form"
+								action="show"
+								text_id="contact"
+								/>
+						</div>
+						<div class="half">
+							<img src="_BASEURL.'/site/images/logo.svg'" alt="logo" cms:eval="src"/>
+							<p><cms:text constant="slogan"/></p>
+							<a
+								href="'tel:'.urlencode(Language::getText('phone'))"
+								cms:eval="href"
+								class="phone"
+								>
+								<cms:text constant="phone"/>
+								<cms:svg file="site-sprite.svg" symbol="phone"/>
+							</a>
+						</div>
+					</cms:mobile>
 				<div class="bottom">
 					<p><cms:text constant="ono_policy"/></p>
 					<cms:template file="stock/copyright.xml">

@@ -1,5 +1,5 @@
 /**
- * Content Style Sheet
+ * Content mobile Style Sheet
  * Ono academic college
  *
  * Copyright (c) 2016. by Way2CU, http://way2cu.com
@@ -20,23 +20,16 @@
 
 section {
   display: block;
-  padding: 40px calc(~'(100vw - 1200px)' / 2);
   position: relative;
 }
 
 section.intro {
-  background-image: url(../images/desktop-header.jpg);
+  background-color: @color_green;
+  background-image: url(../images/mobile-header.jpg);
   background-repeat: no-repeat;
   background-position: center top;
-  min-height: 620px;
-}
-
-section.pattern {
-  background-image: url(../images/pattern.png);
-  background-repeat: repeat;
-  background-position: center center;
-  background-size: 200px 200px;
-  text-align: center;
+  background-size: 100% auto;
+  min-height: 360px;
 }
 
 section.grey,
@@ -50,7 +43,7 @@ section.grey h2 {
   text-align: center;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
-  font-size: 2.5em;
+  font-size: 2em;
   color: @color_white;
 }
 
@@ -66,21 +59,21 @@ section.intro article {
   margin-left: auto;
   margin-right: auto;
   text-align: center; 
-  padding-top: 3em;
-  padding-bottom: 3em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   background-color: @color_white;
   color: @color_green;
-  width: 50%;
   line-height: 100%;
+  width: 95%;
 }
 
 section.intro article h1 {
-  font-size: 2.5em;
+  font-size: 1.5em;
   margin-top: 0px;
 }
 
 section.intro article p {
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: 700;
 }
 
@@ -88,30 +81,49 @@ section.intro article p:last-of-type {
   margin-bottom: 0px;
 }
 
+section.pattern,
+section.discount {
+  background-color: @color_green;
+  background-image: url(../images/circle.svg);
+  background-repeat: no-repeat;
+  background-position: center 10px;
+  background-size: 100% auto;
+}
+
+section.pattern {
+  padding-top: 6em;
+  text-align: center;
+  background-color: @color_light_grey;
+}
+
+section.pattern ul {
+  background-color: @color_white;
+}
+
 section.intro svg {
   position: absolute;
-  bottom: 100px;
+  bottom: 50px;
   left: 50%;
-  margin-left: -2.5em;
-  width: 5em;
-  height: 5em;
+  margin-left: -1.5em;
+  width: 3em;
+  height: 3em;
   border-radius: 50%;
   box-shadow: 0px 0px 3px fade(@color_grey, 60%);
 }
 
 div.half,
 div.form_wrap {
-  display: inline-block;
-  vertical-align: top;
-  width: 600px - @container_spacing;
+  display: block;
+  padding-top: 4em;
+  padding-bottom: 2em;
 }
 
 div.half {
   text-align: center;
 }
 
-div.half:nth-of-type(odd) {
-  margin-left: @container_spacing;
+div.half.grey {
+  padding: 0;
 }
 
 section.pattern h2,
@@ -119,7 +131,7 @@ div.form_wrap > p,
 div.half h2 {
   margin: 0;
   padding-bottom: 0.5em;
-  font-size: 2.5em;
+  font-size: 1.5em;
 }
 
 div.form_wrap > p {
@@ -131,36 +143,39 @@ div.form_wrap > p {
 
 section.pattern > p {
   margin-top: 0;
-  font-size: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
+  font-size: 1em;
 }
 
 section.pattern h2,
 div.half h2 {
   margin-bottom: 1em;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
   color: @color_green;
 }
 
 div.discount {
   margin-left: auto;
   margin-right: auto;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   color: @color_white;
   background-color: @color_green;
   border: 3px dashed @color_white;
   transform: rotate(5deg);
+  width: 80%;
 }
 
 div.discount p {
   margin: 0px;
-  font-size: 3em;
+  font-size: 1.5em;
   line-height: 100%;
 }
 
 div.discount strong {
-  font-size: 1.3em;
+  font-size: 1.1em;
 }
 
 /*
@@ -189,7 +204,7 @@ div.form_wrap form label:before {
   @icon_count: 4;
   content: "";
   position: absolute;
-  top: 0px;
+  top: -25px;
   right: 0px;
   background-image: url(../images/form-icons.svg);
   background-repeat: no-repeat;
@@ -216,22 +231,18 @@ div.form_wrap form label:nth-of-type(4):before {
 }
 
 div.form_wrap form label span {
-  display: inline-block;
-  vertical-align: middle;
+  display: block;
   text-align: right;
-  box-sizing: border-box;
   padding-right: 50px;
-  width: 20%;
 }
 
 div.form_wrap form label select,
 div.form_wrap form label input {
-  display: inline-block;
-  vertical-align: middle;
+  display: block;
   padding: 1em;
   background-color: @color_white;
   border: 1px solid @color_light_grey;
-  width: calc(~'80% - 2px - 2em');
+  width: 90%;
 }
 
 div.form_wrap div.controls {
@@ -244,7 +255,7 @@ div.form_wrap div.controls button {
   border: 1px solid @color_light_grey;
   background-color: @color_green;
   color: @color_white;
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s;
@@ -264,24 +275,25 @@ ul {
   list-style-type: none;
 }
 
-ul.image_list {
-  text-align: center;
-  padding: 40px calc(~'(100% - 1200px)' / 2);
-}
-
 ul.image_list.sponsers {
+  text-align: center;
   padding: 0;
 }
 
-ul.image_list li,
 ul li.stock.feature {
-  display: inline-block;
-  vertical-align: top;
-  width: 33.3%;
+  display: block;
+  border-bottom: 1px solid @color_grey;
+}
+
+ul li.stock.feature {
+  padding: 0.5em;
 }
 
 ul.image_list li {
-  width: 25%;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  width: 50%;
   margin-top: 1em;
   margin-bottom: 1em;
 }
@@ -293,7 +305,7 @@ ul.image_list li img {
 
 ul.image_list.sponsers li {
   margin: 0;
-  width: 20%;
+  width: 50%;
 }
 
 ul.image_list.sponsers img {
@@ -312,20 +324,17 @@ ul.image_list li p {
 }
 
 ul li.stock.feature svg {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   fill: @color_green;
 }
 
 ul li.stock.feature > p {
   margin-bottom: 0;
-  padding-left: 1em;
-  padding-right: 1em;
-  font-size: 1.5em;
-}
-
-div.half.grey {
-  min-height: 850px;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 1em;
+  font-size: 1em;
 }
 
 div.half.grey h2 {
