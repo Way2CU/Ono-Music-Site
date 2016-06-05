@@ -9,7 +9,9 @@
 		</head>
 
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
+			<cms:raw file="parts/gtm.html"/>
 			<cms:svg file="site-sprite.svg"/>
+
 			<!-- Top section of the site -->
 			<header>
 				<a  class="logo" href="url_Make()" cms:eval="href">
