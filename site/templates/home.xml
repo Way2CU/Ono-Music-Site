@@ -9,7 +9,9 @@
 		</head>
 
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
+			<cms:raw file="parts/gtm.html"/>
 			<cms:svg file="site-sprite.svg"/>
+
 			<!-- Top section of the site -->
 			<header>
 				<a  class="logo" href="url_Make()" cms:eval="href">
@@ -28,7 +30,7 @@
 						<cms:svg file="site-sprite.svg" symbol="phone"/>
 					</a>
 				</cms:mobile>
-				
+
 				<cms:desktop>
 					<a
 						href="'tel:'.urlencode(Language::getText('phone'))"
@@ -71,7 +73,7 @@
 			</section>
 
 			<section class="pattern">
-				
+
 				<cms:module
 					name="articles"
 					action="show_group"

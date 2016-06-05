@@ -46,11 +46,24 @@ Site.is_mobile = function() {
 };
 
 /**
+ * Handle successful form submission.
+ * @param object response_data
+ */
+Site.handle_submission = function(response_data) {
+	dataLayer.push({event: 'leadsend'});
+};
+
+/**
  * Function called when document and images have been completely loaded.
  */
 Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
+
+	for (var index in Caracal.ContactForm.list) {
+		var contact_form = Caracal.ContactForm.list[index];
+		contact_form.events.connect('submit-success', Site.handle_submission);
+	}
 };
 
 
