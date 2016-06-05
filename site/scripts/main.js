@@ -50,7 +50,7 @@ Site.is_mobile = function() {
  * @param object response_data
  */
 Site.handle_submission = function(response_data) {
-	dataLayer.push({event: 'leadsend'});
+	dataLayer.push({event: 'leadsent'});
 };
 
 /**
