@@ -51,6 +51,7 @@ Site.is_mobile = function() {
  */
 Site.handle_submission = function(response_data) {
 	dataLayer.push({event: 'leadsent'});
+	return true;
 };
 
 /**
