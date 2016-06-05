@@ -45,6 +45,7 @@
 					template="parts/discount.xml"
 					/>
 				<div class="form_wrap">
+					<p><cms:text constant="title_form"/></p>
 					<cms:module
 						name="contact_form"
 						action="show"
@@ -69,38 +70,44 @@
 					group="information"
 					template="parts/details.xml"
 					/>
-				<h3><cms:text constant="title_sponsers"/></h3>
-				<ul>
+				<h3 class="center"><cms:text constant="title_sponsers"/></h3>
+				<ul class="image_list sponsers">
 					<cms:module
 						name="gallery"
 						action="show_image_list"
-						text_id="sponsers"
-						template="parts/gallery_images.xml"
+						group="sponsers"
+						template="parts/sponser_gallery.xml"
 						/>
 				</ul>
 			</section>
 
-			<section>
+			<section class="grey">
 				<h2><cms:text constant="title_graduates"/></h2>
-				<cms:module
-					name="gallery"
-					action="show_image_list"
-					group="graduates"
-					template="parts/gallery_images.xml"
-					>
-					<param name="title" value=""/>
-					<param name="description" value=""/>
-				</cms:module>
+				<ul class="image_list">
+					<cms:module
+						name="gallery"
+						action="show_image_list"
+						group="graduates"
+						template="parts/gallery_images.xml"
+						>
+						<param name="title" value=""/>
+						<param name="description" value=""/>
+					</cms:module>
+				</ul>
+			</section>
 
+			<section class="green">
 				<h2><cms:text constant="title_lecturers"/></h2>
-				<cms:module
-					name="gallery"
-					action="show_image_list"
-					group="lecturers"
-					template="parts/gallery_images.xml"
-					>
-					<param name="title" value=""/>
-				</cms:module>
+				<ul class="image_list">
+					<cms:module
+						name="gallery"
+						action="show_image_list"
+						group="lecturers"
+						template="parts/gallery_images.xml"
+						>
+						<param name="title" value=""/>
+					</cms:module>
+				</ul>
 			</section>
 
 			<footer>
@@ -117,19 +124,22 @@
 					</a>
 				</div>
 				<div class="form_wrap">
+					<p><cms:text constant="title_form"/></p>
 					<cms:module
 						name="contact_form"
 						action="show"
 						text_id="contact"
 						/>
 				</div>
-				<cms:template file="stock/copyright.xml">
-					<param name="holder" value="copyright_holder"/>
-					<param name="text" value="copyright_text"/>
-					<param name="light" value="1"/>
-				</cms:template>
+				<div class="bottom">
+					<p><cms:text constant="ono_policy"/></p>
+					<cms:template file="stock/copyright.xml">
+						<param name="holder" value="copyright_holder"/>
+						<param name="text" value="copyright_text"/>
+						<param name="light" value="1"/>
+					</cms:template>
+				</div>
 			</footer>
-			
 		</body>
 	</html>
 </document>

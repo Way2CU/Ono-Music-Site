@@ -1,12 +1,12 @@
 <document>
-  <cms:var param="description" multilanguage="yes"/>
-  <cms:var param="title" multilanguage="yes"/>
+ <cms:markdown param="description" multilanguage="yes"/>
+  <h2><cms:var param="title" multilanguage="yes"/></h2>
   <ul>
     <cms:module
       name="articles"
       action="show_list"
       group="features"
-      template="features_generic.xml"
+      template="stock/features_generic.xml"
       >
       <param name="sprite" value=""/>
     </cms:module>

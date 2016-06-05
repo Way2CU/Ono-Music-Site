@@ -1,6 +1,9 @@
 <document>
-  <div class="half">
-    <cms:svg file="site-sprite.svg" symbol="location"/>
+  <div class="half grey">
+    <h2>
+      <cms:svg file="site-sprite.svg" symbol="location"/>
+      <cms:markdown param="title" multilanguage="yes"/>
+    </h2>
     <cms:markdown param="content" multilanguage="yes"/>
   </div>
 </document>
