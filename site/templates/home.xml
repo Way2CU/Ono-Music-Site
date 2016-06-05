@@ -30,7 +30,7 @@
 						<cms:svg file="site-sprite.svg" symbol="phone"/>
 					</a>
 				</cms:mobile>
-				
+
 				<cms:desktop>
 					<a
 						href="'tel:'.urlencode(Language::getText('phone'))"
@@ -73,7 +73,7 @@
 			</section>
 
 			<section class="pattern">
-				
+
 				<cms:module
 					name="articles"
 					action="show_group"
