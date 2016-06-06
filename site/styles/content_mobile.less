@@ -243,7 +243,17 @@ div.form_wrap form label input {
   background-color: @color_white;
   border: 1px solid @color_light_grey;
   width: 90%;
+  transition: all 0.3s;
 }
+
+div.form_wrap form label input:hover {
+  border: 1px solid lighten(@color_green, 10%);
+}
+
+div.form_wrap form label input:focus {
+  border: 1px solid @color_green;
+}
+
 
 div.form_wrap div.controls {
   text-align: center;
