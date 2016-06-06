@@ -3,7 +3,7 @@
     <li>
       <img 
         src="gallery::getThumbnailById($params['id'], null, 250,Thumbnail::CONSTRAIN_BOTH)"
-        alt="$params['title'][$language]" 
+        alt="fix_chars($params['title'][$language])" 
         cms:eval="src,alt"
         />
       <!-- show title if needed -->
@@ -22,7 +22,7 @@
     <li>
       <img 
         src="gallery::getThumbnailById($params['id'], null, 150,Thumbnail::CONSTRAIN_BOTH)"
-        alt="$params['title'][$language]" 
+        alt="fix_chars($params['title'][$language])" 
         cms:eval="src,alt"
         />
       <!-- show title if needed -->
