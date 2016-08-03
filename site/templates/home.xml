@@ -2,12 +2,13 @@
 <!DOCTYPE document SYSTEM "../units/schema/language.dtd">
 <document>
 	<cms:var name="_DOCTYPE"/>
-	<html lang="$language" cms:eval="lang">
+	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
 		<head>
 			<title><cms:text constant="site_title"/></title>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
+<<<<<<< HEAD
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
 			<cms:raw file="gtm.html"/>
 			<cms:svg file="site-sprite.svg"/>
@@ -182,6 +183,10 @@
 					</cms:template>
 				</div>
 			</footer>
+=======
+		<body>
+			<h1>It works!</h1>
+>>>>>>> b5dcd9102dce7c58045b8cf275fb1b2c21fe0e0e
 		</body>
 	</html>
 </document>
