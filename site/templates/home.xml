@@ -9,7 +9,7 @@
 		</head>
 		
 		<body>
-			<cms:raw file="gtm.html"/>
+			<cms:raw file="gtm.txt"/>
 			<cms:svg file="site-sprite.svg"/>
 
 			<!-- Top section of the site -->
