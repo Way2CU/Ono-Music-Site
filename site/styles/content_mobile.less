@@ -230,6 +230,10 @@ div.form_wrap form label:nth-of-type(4):before {
   background-position: 0 unit(-(@form_icon_size * 3), px);
 }
 
+div.form_wrap form label:nth-of-type(n+5):before {
+  display: none;
+}
+
 div.form_wrap form label span {
   display: block;
   text-align: right;
@@ -371,4 +375,11 @@ div.half.grey ul {
 
 div.half.grey ul li {
   padding-bottom: 0.5em;
+}
+
+div.half.grey ul li em {
+  display: block;
+  padding: 0em 0.5em;
+  font-style: normal;
+  font-weight: 700;
 }
