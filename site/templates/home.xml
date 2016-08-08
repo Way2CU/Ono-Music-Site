@@ -174,7 +174,6 @@
 					</div>
 				</cms:mobile>
 				<div class="bottom">
-					<p><cms:text constant="ono_policy"/></p>
 					<cms:template file="stock/copyright.xml">
 						<param name="holder" value="copyright_holder"/>
 						<param name="text" value="copyright_text"/>
