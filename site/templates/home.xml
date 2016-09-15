@@ -99,7 +99,9 @@
 				</ul>
 			</section>
 
-			<section class="grey">
+			<!-- Lecureres sections -->
+
+<!-- 			<section class="grey">
 				<h2><cms:text constant="title_graduates"/></h2>
 				<ul class="image_list">
 					<cms:module
@@ -126,7 +128,7 @@
 						<param name="title" value=""/>
 					</cms:module>
 				</ul>
-			</section>
+			</section> -->
 			<footer>
 				<cms:desktop>
 					<div class="half">
