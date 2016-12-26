@@ -11,7 +11,7 @@
 			<meta property="og:image" content="http://openday.ono.ac.il/site/images/facebook.jpg"/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
-		
+
 		<body>
 			<cms:raw file="gtm.txt"/>
 			<cms:svg file="site-sprite.svg"/>
@@ -105,7 +105,7 @@
 
 			<!-- Lecureres sections -->
 
-<!-- 			<section class="grey">
+			<section class="grey">
 				<h2><cms:text constant="title_graduates"/></h2>
 				<ul class="image_list">
 					<cms:module
@@ -132,7 +132,7 @@
 						<param name="title" value=""/>
 					</cms:module>
 				</ul>
-			</section> -->
+			</section>
 			<footer>
 				<cms:desktop>
 					<div class="half">
