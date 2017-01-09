@@ -60,12 +60,16 @@
 			</section>
 
 			<section class="discount">
-				<cms:module
-					name="articles"
-					action="show"
-					text_id="discount"
-					template="parts/discount.xml"
-					/>
+		  		<div class="half">
+					<cms:module
+						name="articles"
+						action="show"
+						text_id="discount"
+						template="parts/discount.xml"
+						/>
+
+					<img src="_BASEURL.'/site/images/ribbon.svg'" alt="discount" cms:eval="src"/>
+				</div>
 				<div class="form_wrap" id="form_direct">
 					<p><cms:text constant="title_form"/></p>
 					<cms:module
