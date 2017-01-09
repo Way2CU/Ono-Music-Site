@@ -1,9 +1,9 @@
 <document>
   <div class="half grey">
-    <h2>
-      <cms:svg file="site-sprite.svg" symbol="location"/>
+    <h3>
+      <cms:svg file="site-sprite.svg" symbol="hat"/>
       <cms:var param="title" multilanguage="yes"/>
-    </h2>
+    </h3>
     <cms:markdown param="content" multilanguage="yes"/>
   </div>
 </document>
