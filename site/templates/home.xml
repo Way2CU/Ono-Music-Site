@@ -89,7 +89,7 @@
 					/>
 			</section>
 
-			<section>
+			<section class="center">
 				<cms:module
 					name="articles"
 					action="show_list"
@@ -108,22 +108,6 @@
 			</section>
 
 			<!-- Lecureres sections -->
-
-			<section class="grey">
-				<h2><cms:text constant="title_graduates"/></h2>
-				<ul class="image_list">
-					<cms:module
-						name="gallery"
-						action="show_image_list"
-						group="graduates"
-						template="parts/gallery_images.xml"
-						>
-						<param name="title" value=""/>
-						<param name="description" value=""/>
-					</cms:module>
-				</ul>
-			</section>
-
 			<section class="green">
 				<h2><cms:text constant="title_lecturers"/></h2>
 				<ul class="image_list">
