@@ -26,7 +26,7 @@ section {
 }
 
 section.intro {
-  background-image: url(../images/desktop-header.jpg);
+  background-image: url(../images/desktop_header.jpg);
   background-repeat: no-repeat;
   background-position: center top;
   min-height: 620px;
@@ -67,12 +67,11 @@ section.intro article {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  padding-top: 3em;
-  padding-bottom: 3em;
+  padding: 1em;
   background-color: fade(@color_white, 90%);
   color: @color_green;
   width: 50%;
-  line-height: 100%;
+  margin-top: 10%;
 }
 
 section.intro article h1 {
@@ -120,7 +119,6 @@ div.form_wrap > p,
 div.half h2 {
   margin: 0;
   padding-bottom: 0.5em;
-  font-size: 2.5em;
 }
 
 div.form_wrap > p {
@@ -128,6 +126,7 @@ div.form_wrap > p {
   text-align: center;
   color: @color_grey;
   border-bottom: 2px solid @color_grey;
+  font-size: 2em;
 }
 
 section.pattern > p {
@@ -137,7 +136,6 @@ section.pattern > p {
 
 section.pattern h2,
 div.half h2 {
-  margin-bottom: 1em;
   padding-left: 1em;
   padding-right: 1em;
   color: @color_green;
@@ -157,17 +155,18 @@ div.discount {
 div.discount p {
   margin: 0px;
   font-size: 3em;
-  line-height: 100%;
 }
 
 div.discount strong {
   font-size: 1.3em;
 }
 
+section.discount div.half img  {
+  width: 100%;
+}
 /*
  * Form
  */
-
 div.form_wrap {
   padding: 1em;
   box-sizing: border-box;
