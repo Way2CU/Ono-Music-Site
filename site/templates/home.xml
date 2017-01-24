@@ -87,24 +87,16 @@
 					text_id="features"
 					template="parts/features.xml"
 					/>
-			</section>
 
-			<section class="center">
-				<cms:module
-					name="articles"
-					action="show_list"
-					group="information"
-					template="parts/details.xml"
-					/>
-				<h3 class="center"><cms:text constant="title_sponsers"/></h3>
-				<ul class="image_list sponsers">
+				<section class="center">
 					<cms:module
-						name="gallery"
-						action="show_image_list"
-						group="sponsers"
-						template="parts/sponser_gallery.xml"
+						name="articles"
+						action="show_list"
+						group="information"
+						template="parts/details.xml"
 						/>
-				</ul>
+				</section>
+
 			</section>
 
 			<!-- Lecureres sections -->
