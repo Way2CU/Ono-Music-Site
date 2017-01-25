@@ -6,10 +6,6 @@
  * Authors: Iliya Melishev
  */
 
-.grey {
-  background-color: @color_light_grey;
-}
-
 .green {
   background-color: lighten(@color_green, 40%);
 }
@@ -161,7 +157,7 @@ div.discount strong {
 }
 
 section.discount div.half img  {
-  width: 100%;
+  width: 88%;
 }
 /*
  * Form
@@ -332,23 +328,31 @@ ul li.stock.feature > p {
   font-size: 1.5em;
 }
 
+/*
+ * Section center inside section pattern
+*/
+
+section.pattern section.center {
+  padding: 0 calc(~'(100% - 1200px)' / 2 );
+  padding-top: 1em;
+}
+
 div.half.grey {
-  min-height: 530px;
   margin: 0;
   display: block;
   margin: 0 auto;
+  width: 100%;
 }
 
 div.half.grey h3 {
   margin: 0;
   padding: 0.5em;
-  background-color: @color_grey;
-  color: @color_white;
+  color: @color_grey;
+  padding-top: 0;
 }
 
 div.half.grey p {
-  text-align: right;
-  padding-right: 35px;
+  margin: 0;
 }
 
 div.half.grey svg {
@@ -358,22 +362,6 @@ div.half.grey svg {
   width: 50px;
   height: 50px;
   fill: @color_green;
-}
-
-div.half.grey ul {
-  padding: 2em;
-  text-align: right;
-}
-
-div.half.grey ul li {
-  padding-bottom: 0.5em;
-}
-
-div.half.grey ul li em {
-  display: block;
-  font-weight: 700;
-  font-style: normal;
-  padding: 0em 0.5em;
 }
 
 /*
