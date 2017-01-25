@@ -1,11 +1,11 @@
 ---
 site:
-  domain: ono.way2cu.work
+  domain: onomusic.way2cu.work
   # subdomain: test
   # alias: domain.com
   root: httpdocs
-  username: ono
-  caracal_branch: "v0.2"
+  username: ono_music
+  caracal_branch: "v0.2.x"
   # ip_address: 0.0.0.0
   # owner: Some Person
   # plan: Unlimited
