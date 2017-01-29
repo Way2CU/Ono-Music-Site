@@ -206,8 +206,8 @@ div.form_wrap form label:nth-of-type(3):before {
   background-position: 0 unit(-(@form_icon_size * 2), px);
 }
 
-div.form_wrap form label:nth-of-type(4):before {
-  background-position: 0 unit(-(@form_icon_size * 3), px);
+div.form_wrap form label:nth-of-type(n+4):before {
+  display: none;
 }
 
 div.form_wrap form label span {
